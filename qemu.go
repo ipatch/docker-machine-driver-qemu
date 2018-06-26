@@ -37,7 +37,7 @@ type Driver struct {
 	FirstQuery bool
 
 	Memory           int
-	DiskSize         int
+	DiskSize         int64
 	CPU              int
 	Program          string
 	Display          bool
@@ -199,7 +199,7 @@ func (d *Driver) DriverName() string {
 func (d *Driver) SetConfigFromFlags(flags drivers.DriverOptions) error {
 	log.Debugf("SetConfigFromFlags called")
 	d.Memory = flags.Int("qemu-memory")
-	d.DiskSize = flags.Int("qemu-disk-size")
+	d.DiskSize = int64(flags.Int("qemu-disk-size"))
 	d.CPU = flags.Int("qemu-cpu-count")
 	d.Program = flags.String("qemu-program")
 	d.Display = flags.Bool("qemu-display")
