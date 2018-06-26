@@ -710,7 +710,7 @@ func (d *Driver) generateDiskImage(size int64) error {
 		return nil
 	}
 	if stdout, stderr, err := cmdOutErr("qemu-img", "convert", "-f", "raw", "-O", "qcow2", rawFile, d.diskPath()); err != nil {
-		fmt.Printf("OUTPUT: %s\n", stdout)
+		fmt.Printf("OUTPUTT: %s\n", stdout)
 		fmt.Printf("ERROR: %s\n", stderr)
 		return err
 	}
