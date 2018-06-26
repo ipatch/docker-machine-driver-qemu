@@ -664,7 +664,7 @@ func (d *Driver) pidfilePath() string {
 
 // Make a boot2docker VM disk image.
 func (d *Driver) generateDiskImage(size int64) error {
-	log.Debugf("Creating %d MB hard disk image...", size)
+	log.Debugf("Creating %d MB hard disk image......foobar", size)
 
 	magicString := "boot2docker, please format-me"
 
