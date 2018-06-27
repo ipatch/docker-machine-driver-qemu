@@ -118,7 +118,14 @@ The above mentioned driver can be copied to any location on the system as long a
 
 <details>
 <h2><summary>For Developers Only</summary></h2>
-<p>This project is uses to [dep](https://golang.github.io/dep/) to manage Go Language project dependancies.</p>
+<p>
+
+This project is uses to [dep](https://golang.github.io/dep/) to manage Go Language project dependancies.
+
+The **vendor** directory within this project is the directory that **dep** uses to maintain the dependancies for the project.
+
+</p>
+
 </details>
 
 
