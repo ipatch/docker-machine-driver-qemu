@@ -4,8 +4,8 @@
 #
 
 # Go and compilation related variables
-# NOTE: Ideally I would place the build artifacts within a `build` dir, but build conflicts with the `build` command.
-BUILD_DIR ?= out
+# Per the Go docs, build artifacts should be placed in `./bin`
+BUILD_DIR ?= bin
 
 # TODO: figure out way to make this work locally and globally.
 ORG := github.com/ipatch
@@ -32,7 +32,7 @@ build: $(BUILD_DIR) vendor
 install: $(BUILD_DIR) vendor
 	sudo mv $(BUILD_DIR)/docker-machine-driver-qemu /usr/local/bin/ && sudo chown root:wheel /usr/local/bin/docker-machine-driver-qemu && sudo chmod u+s /usr/local/bin/docker-machine-driver-qemu
 
-default: build 
+# default: build 
 
 
 

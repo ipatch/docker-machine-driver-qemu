@@ -124,6 +124,9 @@ This project is uses to [dep](https://golang.github.io/dep/) to manage Go Langua
 
 The **vendor** directory within this project is the directory that **dep** uses to maintain the dependancies for the project.
 
+**Note** Go lang tends to lean more towards convention over configuration, ie. when building a _cmd_ ie. `docker-machine-driver-qemu` the Go compiler looks for a `.go` file with the name of the command within the directory `cmd`.
+
+For more information about Go lang project structure [click me](https://golang.org/pkg/go/build/)
 </p>
 
 </details>
