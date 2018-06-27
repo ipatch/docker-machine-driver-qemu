@@ -11,6 +11,6 @@ import (
 )
 
 func main() {
-	plugin.RegisterDriver(qemu.NewDriver("", ""))
+	plugin.RegisterDriver(qemu.NewDriver("default", "path"))
 }
 

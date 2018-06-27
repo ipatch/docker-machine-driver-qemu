@@ -483,18 +483,18 @@ func (d *Driver) Start() error {
 
 	if d.Network == "user" {
 		startCmd = append(startCmd,
-			"-net", "nic,vlan=0,model=virtio",
-			"-net", fmt.Sprintf("user,vlan=0,hostfwd=tcp::%d-:22,hostfwd=tcp::%d-:2376,hostname=%s", d.SSHPort, d.EnginePort, d.GetMachineName()),
+			"-netdev", "nic,vlan=0,model=virtio",
+			"-netdev", fmt.Sprintf("user,vlan=0,hostfwd=tcp::%d-:22,hostfwd=tcp::%d-:2376,hostname=%s", d.SSHPort, d.EnginePort, d.GetMachineName()),
 		)
 	} else if d.Network == "tap" {
 		startCmd = append(startCmd,
-			"-net", "nic,vlan=0,model=virtio",
-			"-net", fmt.Sprintf("tap,vlan=0,ifname=%s,script=no,downscript=no", d.NetworkInterface),
+			"-netdev", "nic,vlan=0,model=virtio",
+			"-netdev", fmt.Sprintf("tap,vlan=0,ifname=%s,script=no,downscript=no", d.NetworkInterface),
 		)
 	} else if d.Network == "bridge" {
 		startCmd = append(startCmd,
-			"-net", "nic,vlan=0,model=virtio",
-			"-net", fmt.Sprintf("bridge,vlan=0,br=%s", d.NetworkBridge),
+			"-netdev", "nic,vlan=0,model=virtio",
+			"-netdev", fmt.Sprintf("bridge,vlan=0,br=%s", d.NetworkBridge),
 		)
 	} else {
 		log.Errorf("Unknown network: %s", d.Network)
@@ -664,7 +664,7 @@ func (d *Driver) pidfilePath() string {
 
 // Make a boot2docker VM disk image.
 func (d *Driver) generateDiskImage(size int64) error {
-	log.Debugf("Creating %d MB hard disk image...")
+	log.Debugf("Creating %d MB hard disk image...REMOVE_ME!!!", size)
 
 	magicString := "boot2docker, please format-me"
 
