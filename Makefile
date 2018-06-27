@@ -4,8 +4,13 @@
 #
 
 # ----------------------------------------------------------------------------
-# If true, disable optimizations and does NOT strip the binary
-# DEBUG ?=
+ifeq ($V, 1)
+	VERBOSE =
+	GO_VERBOSE = -v -x
+else
+	VERBOSE = @
+	GO_VERBOSE =
+endif
 
 # ----------------------------------------------------------------------------
 # Include makefiles
