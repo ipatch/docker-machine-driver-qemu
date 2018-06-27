@@ -13,7 +13,7 @@ from [@fventuri](https://github.com/fventuri)
 Create machines locally using [QEMU](http://www.qemu.org/).
 This driver requires QEMU to be installed on your host.
 
-> See [Installing QEMU](#installing-qemu) for instructions on install QEMU for your OS
+> See [Installing QEMU](#installing-qemu) for instructions on installing QEMU for your OS
 
     $ docker-machine create --driver=qemu qemu-test
 
