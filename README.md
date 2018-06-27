@@ -114,5 +114,12 @@ The downloaded repo / project will be stored in `$GOPATH/src/github.com/machine-
 
 To build the driver using the **Makefile** change directory to the driver machine project root, and run `make build`.  If all goes well a binary with the name of `docker-machine-driver-qemu` will be placed in `$GOPATH/src/github.com/machine-drivers/docker-machine-driver-qemu/out/`
 
-The above mentioned driver can be copied to any location the the system as long as the binary is executable and located in the user's `$PATH` ie. `/usr/local/bin`
+The above mentioned driver can be copied to any location on the system as long as the binary is executable and located in the user's `$PATH` ie. `/usr/local/bin`
+
+<details>
+<h2><summary>For Developers Only</summary></h2>
+<p>This project is uses to [dep](https://golang.github.io/dep/) to manage Go Language project dependancies.</p>
+</details>
+
+
 
