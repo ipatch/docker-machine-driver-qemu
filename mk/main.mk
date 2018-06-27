@@ -1,9 +1,11 @@
 # Initialize version and gc flags
-GO_LDFLAGS := -X `go list ./version`.GitCommit=`git rev-parse --short HEAD 2>/dev/null`
+GO_LDFLAGS := -X `go list ./qemu/version`.GitCommit=`git rev-parse --short HEAD 2>/dev/null`
 GO_GCFLAGS :=
 
 # Full package list
-PKGS := $(shell go list -tags "$(BUILDTAGS)" ./... | grep -v "/vendor/" | grep -v "/cmd")
+# PKGS := $(shell go list -tags "$(BUILDTAGS)" ./... | grep -v "/vendor/" | grep -v "/cmd")
+
+PKGS := $(shell go list -tags "$(BUILDTAGS)" ./... | grep -v "/vendor/")
 
 # Resolving binary dependencies for specific targets
 GOLINT_BIN := $(GOPATH)/bin/golint
