@@ -104,3 +104,15 @@ brew install go
 
 The above command will get a working version [the Go Programming language](http://golang.org) setup on the localhost.
 
+After Go has been installed and setup, one can download docker-machine-driver-qemu with the below command
+
+```
+go get -d github.com/machine-drivers/docker-machine-driver-qemu
+```
+
+The downloaded repo / project will be stored in `$GOPATH/src/github.com/machine-drivers/docker-machine-driver-qemu`
+
+To build the driver using the **Makefile** change directory to the driver machine project root, and run `make build`.  If all goes well a binary with the name of `docker-machine-driver-qemu` will be placed in `$GOPATH/src/github.com/machine-drivers/docker-machine-driver-qemu/out/`
+
+The above mentioned driver can be copied to any location the the system as long as the binary is executable and located in the user's `$PATH` ie. `/usr/local/bin`
+
