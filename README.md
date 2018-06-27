@@ -68,9 +68,9 @@ variable and CLI option are provided the CLI option takes the precedence.
 | `QEMU_BOOT2DOCKER_URL`            | `--qemu-boot2docker-url`          |
 | `QEMU_VIRTIO_DRIVES`              | `--qemu-virtio-drives`            |
 
-#### Installing QEMU
+## Installing QEMU
 
-##### macOS
+### macOS
 
 To install QEMU on macOS, one of the quickest ways is to install via [brew](http://brew.sh)
 
@@ -82,7 +82,7 @@ Once Homebrew has been installed and setup,
 brew install qemu
 ```
 
-##### GNU/Linux
+### GNU/Linux
 
 > Installing QEMU on GNU/Linux with an agnostic package manager, ie [Linuxbrew](http://linuxbrew.sh/) 
 
@@ -92,7 +92,7 @@ brew install qemu
 
 > Instructions for installing Linuxbrew can be found at [linuxbrew.sh](linuxbrew.sh)
 
-#### Building `docker-machine-qemu-driver` from source
+## Building `docker-machine-qemu-driver` from source
 
 > To build this particular docker-machine driver, one will require a working Go envrionment, for more information about Go, [click here](https://golang.org/)
 
