@@ -72,7 +72,7 @@ variable and CLI option are provided the CLI option takes the precedence.
 
 ##### macOS
 
-To install QEMU on macOS, one of the quickest ways is to install via [brew](brew.sh)
+To install QEMU on macOS, one of the quickest ways is to install via [brew](http://brew.sh)
 
 > Instructions on installing Homebrew can be found at [brew.sh](https://brew.sh/)
 
@@ -84,11 +84,13 @@ brew install qemu
 
 ##### GNU/Linux
 
-> Installing QEMU on GNU/Linux with an agnostic package manager, ie [Linuxbrew](http://linuxbrew.sh/) Instructions for installing Linuxbrew can be found at [linuxbrew.sh](linuxbrew.sh)
+> Installing QEMU on GNU/Linux with an agnostic package manager, ie [Linuxbrew](http://linuxbrew.sh/) 
 
 ```
 brew install qemu
 ```
+
+> Instructions for installing Linuxbrew can be found at [linuxbrew.sh](linuxbrew.sh)
 
 #### Building `docker-machine-qemu-driver` from source
 
