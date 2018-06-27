@@ -112,7 +112,7 @@ go get -d github.com/machine-drivers/docker-machine-driver-qemu
 
 The downloaded repo / project will be stored in `$GOPATH/src/github.com/machine-drivers/docker-machine-driver-qemu`
 
-To build the driver using the **Makefile** change directory to the driver machine project root, and run `make build`.  If all goes well a binary with the name of `docker-machine-driver-qemu` will be placed in `$GOPATH/src/github.com/machine-drivers/docker-machine-driver-qemu/out/`
+To build the driver using the **Makefile** change directory to the driver machine project root, and run `make build`.  If all goes well a binary with the name of `docker-machine-driver-qemu` will be placed in `$GOPATH/src/github.com/machine-drivers/docker-machine-driver-qemu/bin/`
 
 The above mentioned driver can be copied to any location on the system as long as the binary is executable and located in the user's `$PATH` ie. `/usr/local/bin`
 
@@ -120,13 +120,43 @@ The above mentioned driver can be copied to any location on the system as long a
 <summary><strong>For Developers Only</strong></summary>
 <p>
 
-This project is uses to [dep](https://golang.github.io/dep/) to manage Go Language project dependancies.
+This project uses [dep](https://golang.github.io/dep/) to manage Go Language project dependancies.
 
-The **vendor** directory within this project is the directory that **dep** uses to maintain the dependancies for the project.
+The **vendor** directory within this project is the directory that **dep** uses to maintain dependancies for the project.
 
 **Note** Go lang tends to lean more towards convention over configuration, ie. when building a _cmd_ ie. `docker-machine-driver-qemu` the Go compiler looks for a `.go` file with the name of the command within the directory `cmd`.
 
 For more information about Go lang project structure [click me](https://golang.org/pkg/go/build/)
+
+#### Build using native Go tooling
+
+To build the `docker-machine-driver-qemu` cmd directly using `go` thus bypassing the Makefile
+
+```
+go build
+```
+
+The above command should create a system binary located in the project root called `docker-machine-driver-qemu`.
+
+To get a more diagnostic understanding of what is going on under the hood of the `build` sub command, pass the `-x` flag to build, ie.
+
+```
+go build -x -v -o [docker-machine-driver-qemu-name-change]
+```
+
+#### Build using Makefile
+
+To build and install this project / docker-machine driver using the accompanying `Makefile`
+
+```
+cd $GOPATH/github.com/machine-drivers/docker-machine-driver-qemu
+make build
+make install
+make clean
+```
+
+The above commands will build the docker-machine driver and put `docker-machine-driver-qemu` located within `/usr/local/bin`, and clean the local build artifacts.
+
 </p>
 
 </details>

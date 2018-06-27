@@ -25,16 +25,13 @@ clean:
 .PHONY: build
 build: $(BUILD_DIR) vendor
 	go build \
-			-installsuffix "static" \
 			-o $(BUILD_DIR)/docker-machine-driver-qemu
 	chmod +x $(BUILD_DIR)/docker-machine-driver-qemu
 
 install: $(BUILD_DIR) vendor
 	sudo mv $(BUILD_DIR)/docker-machine-driver-qemu /usr/local/bin/ && sudo chown root:wheel /usr/local/bin/docker-machine-driver-qemu && sudo chmod u+s /usr/local/bin/docker-machine-driver-qemu
 
-# default: build 
-
-
+default: build
 
 # ----------------------------------------------------------------------------
 # ifeq ($V, 1)

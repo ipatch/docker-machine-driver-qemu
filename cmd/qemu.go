@@ -356,7 +356,7 @@ func (d *Driver) Create() error {
 		return err
 	}
 
-	log.Infof("Creating Disk image......foobar", d.DiskSize)
+	log.Infof("Creating Disk image...")
 	if err := d.generateDiskImage(d.DiskSize); err != nil {
 		return err
 	}

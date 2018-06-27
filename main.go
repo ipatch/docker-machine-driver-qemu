@@ -1,4 +1,4 @@
-package qemu
+package main
 
 import (
 	"github.com/docker/machine/libmachine/drivers/plugin"
