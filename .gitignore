@@ -4,6 +4,9 @@ bin/
 *.a
 *.so
 
+# Compiled binaries
+out/
+
 # Folders
 _obj
 _test

@@ -9,7 +9,6 @@ BUILD_DIR ?= out
 ORG := github.com/ipatch
 REPOPATH ?= $(ORG)/docker-machine-driver-qemu
 
-
 vendor:
 	dep ensure -v
 
