@@ -117,7 +117,7 @@ To build the driver using the **Makefile** change directory to the driver machin
 The above mentioned driver can be copied to any location on the system as long as the binary is executable and located in the user's `$PATH` ie. `/usr/local/bin`
 
 <details>
-<summary>For Developers Only</summary>
+<summary><strong>For Developers Only</strong></summary>
 <p>
 
 This project is uses to [dep](https://golang.github.io/dep/) to manage Go Language project dependancies.
