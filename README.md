@@ -141,8 +141,10 @@ The above command should create a system binary located in the project root call
 To get a more diagnostic understanding of what is going on under the hood of the `build` sub command, pass the `-x` flag to build, ie.
 
 ```
-go build -x -v -o [docker-machine-driver-qemu-name-change]
+go build -x -v -o [./bin/docker-machine-driver-qemu-name-change]
 ```
+
+> Changing the name of the binary is required to see full verbose output of the above command.
 
 #### Build using Makefile
 
