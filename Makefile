@@ -1,11 +1,13 @@
 #
 # Makefile for Go
-# CREDIT: https://github.com/machine-drivers/docker-machine-driver-xhyve
+# CREDIT: https://github.com/machine-drivers/
 #
 
 # Go and compilation related variables
+# NOTE: Ideally I would place the build artifacts within a `build` dir, but build conflicts with the `build` command.
 BUILD_DIR ?= out
 
+# TODO: figure out way to make this work locally and globally.
 ORG := github.com/ipatch
 REPOPATH ?= $(ORG)/docker-machine-driver-qemu
 
@@ -26,7 +28,13 @@ build: $(BUILD_DIR) vendor
 			-installsuffix "static" \
 			-o $(BUILD_DIR)/docker-machine-driver-qemu
 	chmod +x $(BUILD_DIR)/docker-machine-driver-qemu
-	# sudo mv $(BUILD_DIR)/docker-machine-driver-hyperkit /usr/local/bin/ && sudo chown root:wheel /usr/local/bin/docker-machine-driver-hyperkit && sudo chmod u+s /usr/local/bin/docker-machine-driver-hyperkit
+
+install: $(BUILD_DIR) vendor
+	sudo mv $(BUILD_DIR)/docker-machine-driver-qemu /usr/local/bin/ && sudo chown root:wheel /usr/local/bin/docker-machine-driver-qemu && sudo chmod u+s /usr/local/bin/docker-machine-driver-qemu
+
+default: build 
+
+
 
 # ----------------------------------------------------------------------------
 # ifeq ($V, 1)
