@@ -6,7 +6,7 @@ from [@SvenDowideit](https://github.com/SvenDowideit)
 
 Its initial use is going to be for running the [Rancher OS](https://github.com/rancher/os) tests, but maybe you'll find a use for it too.
 
-from [@fventuri](https://github.com/fventuri)
+from @fventuri
 
 #### QEMU
 
