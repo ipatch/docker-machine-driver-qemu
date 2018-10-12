@@ -4,6 +4,11 @@ bin/
 *.a
 *.so
 
+# Build output directory
+out/
+# Build artifacts
+**/docker-machine-driver-qemu
+
 # Folders
 _obj
 _test
@@ -23,3 +28,4 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
